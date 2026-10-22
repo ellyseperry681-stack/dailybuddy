@@ -4,142 +4,178 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#080b18">
-<meta name="description" content="DailyBuddy India — beautiful, free everyday online tools.">
-<title>DailyBuddy India | Free Everyday Tools</title>
+<meta name="theme-color" content="#080816">
+<meta name="description" content="DailyBuddy India — free everyday tools in a beautiful 3D workspace.">
+<title>DailyBuddy India | Premium Workspace</title>
 <style>
-:root{--bg:#080b18;--panel:#11172a;--text:#f5f6ff;--muted:#a7b0cc;--purple:#a78bfa;--cyan:#67e8f9;--border:#ffffff18}
+:root{--bg:#080816;--panel:#111329;--purple:#a78bfa;--cyan:#67e8f9;--text:#f8f8ff;--muted:#a5a9c8}
 *{box-sizing:border-box}
-body{margin:0;background:radial-gradient(ellipse at 50% -10%,#3b267a 0,transparent 43%),radial-gradient(ellipse at 100% 55%,#123b58 0,transparent 34%),var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,sans-serif;min-height:100vh}
-header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:19px clamp(16px,5vw,65px);border-bottom:1px solid var(--border);background:#080b1880;backdrop-filter:blur(15px);position:sticky;top:0;z-index:5}
-.logo{font-weight:900;font-size:22px;letter-spacing:-1px}.logo span{color:var(--cyan)}
-.pill{font-size:11px;color:#c9bcff;border:1px solid #a78bfa60;border-radius:99px;padding:8px 12px}
-main{max-width:1100px;margin:auto;padding:25px 17px 70px}
-.hero{text-align:center;padding:65px 0 45px;perspective:900px}
-.kicker{font-size:12px;letter-spacing:3px;color:var(--cyan);font-weight:800}
-h1{font-size:clamp(42px,8vw,76px);line-height:1.02;letter-spacing:-3px;margin:18px 0}
-.gradient{background:linear-gradient(100deg,#c4b5fd,#67e8f9,#f0abfc);background-clip:text;-webkit-background-clip:text;color:transparent}
-.hero p{color:var(--muted);max-width:570px;margin:20px auto 27px;line-height:1.8}
-.search-wrap{max-width:550px;margin:auto;position:relative}
-#search{width:100%;padding:17px 20px;border:1px solid #a78bfa66;background:#12182be8;color:white;border-radius:16px;font-size:15px;outline:none;box-shadow:0 12px 40px #7c3aed18,inset 0 1px #ffffff12}
-#search:focus{border-color:var(--cyan);box-shadow:0 0 25px #67e8f930}
-.stats{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:22px}
-.stats span{font-size:12px;color:#c5cce0;padding:8px 12px;background:#ffffff08;border:1px solid var(--border);border-radius:99px}
-.section-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:10px 0 20px}
-h2{font-size:22px;margin:0}.muted{color:var(--muted);font-size:12px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,245px),1fr));gap:19px}
-.card{position:relative;overflow:hidden;min-width:0;padding:22px;border-radius:21px;border:1px solid #ffffff20;background:linear-gradient(145deg,#ffffff0d,#ffffff03 55%,#8b5cf610);box-shadow:0 16px 30px #0005,inset 0 1px #ffffff15;transform:perspective(900px) translateZ(0);transition:transform .25s,border-color .25s,box-shadow .25s}
-.card:before{content:"";position:absolute;width:150px;height:150px;right:-80px;top:-90px;border-radius:50%;background:var(--glow,#8b5cf6);filter:blur(65px);opacity:.4;pointer-events:none}
-@media(hover:hover){.card:hover{transform:perspective(900px) rotateX(2deg) rotateY(-2deg) translateY(-5px);border-color:#a78bfa85;box-shadow:0 23px 45px #0007,0 0 22px #8b5cf618}}
-.icon{height:54px;width:54px;display:grid;place-items:center;border:1px solid #ffffff20;border-radius:16px;background:linear-gradient(145deg,#ffffff20,#ffffff05);box-shadow:0 7px 12px #0004,inset 0 1px #ffffff25;font-size:27px}
-.card h3{font-size:19px;margin:17px 0 6px}.card p{font-size:13px;color:var(--muted);line-height:1.65;margin:0 0 17px}
-label{display:block;color:#c3cbe0;font-size:12px;margin:11px 0 6px}
-input,textarea{width:100%;min-width:0;padding:12px;border:1px solid #ffffff20;background:#090e1d;color:white;border-radius:10px;font:inherit;outline:none}
-input:focus,textarea:focus{border-color:#a78bfa}
-button{width:100%;border:1px solid #ffffff25;border-radius:11px;padding:12px 15px;margin-top:11px;background:linear-gradient(105deg,#8b5cf6,#6366f1 60%,#0891b2);color:white;font-size:13px;font-weight:800;cursor:pointer;box-shadow:0 5px 0 #35236e,0 10px 20px #0003;transition:transform .15s}
-button:active{transform:translateY(3px);box-shadow:0 2px 0 #35236e}
-.result{color:#8cf5dc;font-size:13px;overflow-wrap:anywhere;min-height:19px;margin-top:13px;line-height:1.6}
+body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 10% 0%,#41217870,transparent 35%),radial-gradient(ellipse at 90% 30%,#075e7470,transparent 30%),var(--bg);font-family:system-ui,-apple-system,sans-serif;color:var(--text)}
+button,input,textarea{font:inherit}
+button{cursor:pointer}
+header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 5%;border-bottom:1px solid #ffffff15;background:#080816a8;backdrop-filter:blur(16px);position:sticky;top:0;z-index:3}
+.brand{font-weight:950;font-size:23px;letter-spacing:-1px}.brand span{color:var(--cyan)}
+.pill{border:1px solid #a78bfa66;color:#d8caff;padding:7px 12px;border-radius:30px;font-size:11px}
+main{max-width:1100px;margin:auto;padding:25px 18px 70px}
+.screen{display:none}.screen.active{display:block}
+.login-wrap{min-height:78vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:45px}
+.welcome h1{font-size:clamp(40px,6vw,66px);line-height:1.05;letter-spacing:-3px;margin:18px 0}
+.grad{background:linear-gradient(100deg,#c4b5fd,#67e8f9,#f0abfc);color:transparent;background-clip:text;-webkit-background-clip:text}
+.welcome p,.muted{color:var(--muted);line-height:1.8}
+.orb{width:170px;height:170px;border-radius:50%;margin:30px auto;background:radial-gradient(circle at 30% 25%,#fff,#a78bfa 13%,#5b21b6 42%,#111329 72%);box-shadow:0 0 50px #8b5cf677, inset -15px -20px 35px #0008;animation:float 5s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-15px) rotate(7deg)}}
+.panel{background:linear-gradient(145deg,#ffffff13,#ffffff04);border:1px solid #ffffff20;border-radius:25px;padding:clamp(20px,4vw,34px);box-shadow:0 25px 80px #0006,inset 0 1px #ffffff12;backdrop-filter:blur(16px)}
+.panel h2{margin:0 0 8px;font-size:27px}
+label{display:block;font-size:12px;color:#d0d2e8;margin:16px 0 7px}
+input,textarea{width:100%;padding:13px 14px;background:#080b1b;border:1px solid #ffffff20;border-radius:11px;color:white;outline:none}
+input:focus,textarea:focus{border-color:var(--cyan);box-shadow:0 0 18px #67e8f922}
+.btn{border:0;border-radius:11px;padding:13px 17px;background:linear-gradient(105deg,#8b5cf6,#6366f1,#0891b2);color:white;font-weight:800;box-shadow:0 6px 0 #31205f,0 10px 25px #0003}
+.btn:active{transform:translateY(3px);box-shadow:0 2px 0 #31205f}
+.full{width:100%;margin-top:18px}
+.link{background:none;border:0;color:var(--cyan);padding:8px;font-weight:700}
+.note{font-size:11px;color:#a5a9c8;line-height:1.7;margin-top:17px}
+.message{color:#8cf5dc;font-size:13px;line-height:1.6;margin-top:12px;overflow-wrap:anywhere}
+.topline{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:28px 0 20px}
+.topline h1{margin:0;font-size:clamp(28px,5vw,43px);letter-spacing:-1.5px}
+.search{max-width:500px;margin:12px 0 24px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,245px),1fr));gap:17px}
+.card{padding:21px;position:relative;overflow:hidden;border:1px solid #ffffff20;border-radius:20px;background:linear-gradient(145deg,#ffffff12,#ffffff04);box-shadow:0 15px 35px #0004,inset 0 1px #ffffff15;transition:.25s}
+.card:before{content:"";position:absolute;right:-60px;top:-65px;width:130px;height:130px;background:var(--glow,#8b5cf6);filter:blur(55px);opacity:.45;pointer-events:none}
+@media(hover:hover){.card:hover{transform:perspective(800px) rotateX(2deg) rotateY(-2deg) translateY(-5px);border-color:#a78bfa88;box-shadow:0 22px 40px #0006,0 0 20px #8b5cf622}}
+.icon{width:51px;height:51px;display:grid;place-items:center;font-size:26px;border-radius:15px;background:linear-gradient(145deg,#ffffff25,#ffffff06);border:1px solid #ffffff20;box-shadow:0 8px 14px #0004}
+.card h3{margin:15px 0 6px}.card p{font-size:13px;color:var(--muted);line-height:1.7;margin:0 0 15px}
+.card button{margin-top:10px}
+.result{color:#8cf5dc;font-size:13px;overflow-wrap:anywhere;line-height:1.7;margin-top:12px;min-height:18px}
 .hide{display:none!important}
-footer{border-top:1px solid var(--border);text-align:center;padding:25px 15px;color:var(--muted);font-size:12px}
-footer strong{color:#ddd5ff}
-::selection{background:#8b5cf6;color:white}
-@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+footer{text-align:center;border-top:1px solid #ffffff15;padding:25px;color:var(--muted);font-size:12px}
+@media(max-width:700px){.login-wrap{grid-template-columns:1fr;gap:15px;padding-top:25px}.welcome{text-align:center}.welcome .orb{width:100px;height:100px;margin:20px auto}.welcome h1{font-size:42px}.welcome p{font-size:14px}.pill{font-size:10px}header{padding:15px 4%}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
 </style>
 </head>
 <body>
 <header>
- <div class="logo">Daily<span>Buddy</span> 🇮🇳</div>
- <div class="pill">✦ FREE TOOLS · NO SIGN-UP</div>
+ <div class="brand">Daily<span>Buddy</span> 🇮🇳</div>
+ <div class="pill">✦ YOUR PERSONAL TOOLKIT</div>
 </header>
 <main>
-<section class="hero">
- <div class="kicker">YOUR DIGITAL EVERYDAY TOOLKIT</div>
- <h1>Make every day<br><span class="gradient">a little easier.</span></h1>
- <p>Simple, useful tools for everyday life. Search, calculate, plan and create — all in one beautiful place.</p>
- <div class="search-wrap"><input id="search" placeholder="⌕  Search for a tool..." aria-label="Search tools"></div>
- <div class="stats"><span>✦ Free to use</span><span>⚡ Fast & simple</span><span>📱 Mobile friendly</span></div>
+<section id="login" class="screen active">
+ <div class="login-wrap">
+  <div class="welcome">
+   <div class="pill">WELCOME TO YOUR WORKSPACE</div>
+   <h1>Make your day<br><span class="grad">extraordinary.</span></h1>
+   <p>Everyday tools, one beautiful place. Simple, fast and free to use.</p>
+   <div class="orb"></div>
+   <div class="muted">✦ Smart tools &nbsp; ✦ Modern design &nbsp; ✦ Mobile ready</div>
+  </div>
+  <div class="panel">
+   <h2 id="formTitle">Welcome back</h2>
+   <p class="muted" id="formSubtitle">Enter a display name to open your demo workspace.</p>
+   <form id="demoForm">
+    <label for="username">Display name</label>
+    <input id="username" autocomplete="nickname" placeholder="What should we call you?" required maxlength="40">
+    <div id="emailField" class="hide">
+     <label for="email">Email (optional)</label>
+     <input id="email" type="email" autocomplete="email" placeholder="you@example.com">
+    </div>
+    <button class="btn full" type="submit" id="submitBtn">Enter workspace ↗</button>
+   </form>
+   <button class="link" id="modeBtn" type="button">Create a demo profile</button>
+   <div class="note">Demo access only. This screen does not create a real account or authenticate your identity. Never enter a password here.</div>
+   <div id="formMessage" class="message" aria-live="polite"></div>
+  </div>
+ </div>
 </section>
-<div class="section-head"><h2>Explore tools</h2><span class="muted" id="count">6 tools</span></div>
-<section class="grid" id="grid">
-<article class="card tool" data-name="calculator math numbers">
- <div class="icon">🧮</div><h3>Smart Calculator</h3><p>Quick calculations for your everyday numbers.</p>
- <label for="expr">Expression</label><input id="expr" placeholder="Example: 25 * 4 + 10">
- <button onclick="calc()">Calculate ↗</button><div class="result" id="calcResult"></div>
-</article>
-<article class="card tool" data-name="age birthday date years">
- <div class="icon">🎂</div><h3>Age Calculator</h3><p>Find your age in years, months and days.</p>
- <label for="dob">Your date of birth</label><input id="dob" type="date">
- <button onclick="age()">Calculate age ↗</button><div class="result" id="ageResult"></div>
-</article>
-<article class="card tool" data-name="password generator security random">
- <div class="icon">🔐</div><h3>Password Generator</h3><p>Create a random password in your browser.</p>
- <label for="plen">Password length (8–32)</label><input id="plen" type="number" min="8" max="32" value="16">
- <button onclick="password()">Generate password ↗</button><div class="result" id="passResult"></div>
- <button onclick="copyPass()" style="background:linear-gradient(100deg,#263550,#34435c);box-shadow:0 5px 0 #172033">Copy password</button>
-</article>
-<article class="card tool" data-name="word counter text writing characters">
- <div class="icon">📝</div><h3>Word Counter</h3><p>Count words and characters in your text.</p>
- <label for="words">Enter or paste text</label><textarea id="words" placeholder="Start typing here..."></textarea>
- <button onclick="wordCount()">Count words ↗</button><div class="result" id="wordResult"></div>
-</article>
-<article class="card tool" data-name="percentage calculator discount marks">
- <div class="icon">📊</div><h3>Percentage Calculator</h3><p>Calculate marks, discounts or any percentage.</p>
- <label for="part">Value</label><input id="part" type="number" placeholder="Example: 45">
- <label for="whole">Total value</label><input id="whole" type="number" placeholder="Example: 60">
- <button onclick="percent()">Calculate percentage ↗</button><div class="result" id="percentResult"></div>
-</article>
-<article class="card tool" data-name="tip split bill money">
- <div class="icon">🧾</div><h3>Bill Splitter</h3><p>Split a bill fairly among friends.</p>
- <label for="bill">Total bill (₹)</label><input id="bill" type="number" min="0" placeholder="Example: 1200">
- <label for="people">Number of people</label><input id="people" type="number" min="1" step="1" value="3">
- <button onclick="splitBill()">Split bill ↗</button><div class="result" id="billResult"></div>
-</article>
+
+<section id="dashboard" class="screen">
+ <div class="topline">
+  <div><div class="pill">YOUR WORKSPACE</div><h1>Hey, <span class="grad" id="hello">Buddy</span> 👋</h1><p class="muted">What would you like to do today?</p></div>
+  <button class="btn" id="logout">Exit demo</button>
+ </div>
+ <input class="search" id="search" placeholder="⌕ Search tools..." aria-label="Search tools">
+ <div class="topline"><h2>Explore your tools</h2><span class="muted" id="count">6 tools</span></div>
+ <section class="grid" id="toolGrid">
+  <article class="card tool" data-name="calculator math numbers"><div class="icon">🧮</div><h3>Smart Calculator</h3><p>Calculate everyday numbers quickly.</p><label for="expr">Expression</label><input id="expr" placeholder="25 * 4 + 10"><button class="btn full" onclick="calc()">Calculate ↗</button><div class="result" id="calcResult"></div></article>
+  <article class="card tool" data-name="age birthday date years"><div class="icon">🎂</div><h3>Age Calculator</h3><p>Find your age in years, months and days.</p><label for="dob">Date of birth</label><input id="dob" type="date"><button class="btn full" onclick="age()">Calculate age ↗</button><div class="result" id="ageResult"></div></article>
+  <article class="card tool" data-name="password generator random security"><div class="icon">🔐</div><h3>Password Generator</h3><p>Generate a random password locally in your browser.</p><label for="plen">Length (8–32)</label><input id="plen" type="number" min="8" max="32" value="16"><button class="btn full" onclick="makePassword()">Generate ↗</button><div class="result" id="passResult"></div><button class="btn full" onclick="copyPassword()">Copy password</button></article>
+  <article class="card tool" data-name="word counter writing text characters"><div class="icon">📝</div><h3>Word Counter</h3><p>Count words and characters in your text.</p><label for="words">Your text</label><textarea id="words" placeholder="Type or paste your text..."></textarea><button class="btn full" onclick="wordCount()">Count ↗</button><div class="result" id="wordResult"></div></article>
+  <article class="card tool" data-name="percentage marks discount calculator"><div class="icon">📊</div><h3>Percentage Calculator</h3><p>Calculate marks, discounts or percentages.</p><label for="part">Your value</label><input id="part" type="number" placeholder="45"><label for="whole">Total value</label><input id="whole" type="number" placeholder="60"><button class="btn full" onclick="percentage()">Calculate ↗</button><div class="result" id="percentResult"></div></article>
+  <article class="card tool" data-name="bill splitter split money friends"><div class="icon">🧾</div><h3>Bill Splitter</h3><p>Split a bill between friends.</p><label for="bill">Total bill (₹)</label><input id="bill" type="number" min="0" placeholder="1200"><label for="people">Number of people</label><input id="people" type="number" min="1" step="1" value="3"><button class="btn full" onclick="splitBill()">Split bill ↗</button><div class="result" id="billResult"></div></article>
+ </section>
+ <p id="empty" class="muted hide">No tools found. Try a different search.</p>
 </section>
-<p class="muted" id="empty" style="display:none;text-align:center;margin:30px">No tools found. Try another search.</p>
 </main>
-<footer><strong>DailyBuddy India</strong> · Free everyday tools<br><p>Useful, simple and made for everyone.</p></footer>
+<footer><strong>DailyBuddy India</strong><p>Useful everyday tools. Free to use.</p><span>Demo profile is kept only in this open page and is not a real account.</span></footer>
 <script>
 const $=id=>document.getElementById(id);
+let signup=false;
+$("modeBtn").addEventListener("click",()=>{
+ signup=!signup;
+ $("formTitle").textContent=signup?"Create your demo profile":"Welcome back";
+ $("formSubtitle").textContent=signup?"Choose a display name for your demo workspace.":"Enter a display name to open your demo workspace.";
+ $("emailField").classList.toggle("hide",!signup);
+ $("submitBtn").textContent=signup?"Create demo profile ↗":"Enter workspace ↗";
+ $("modeBtn").textContent=signup?"Back to welcome":"Create a demo profile";
+ $("formMessage").textContent="";
+});
+$("demoForm").addEventListener("submit",e=>{
+ e.preventDefault();
+ const name=$("username").value.trim();
+ if(!name){$("formMessage").textContent="Please enter a display name.";return}
+ $("hello").textContent=name;
+ $("login").classList.remove("active");
+ $("dashboard").classList.add("active");
+ window.scrollTo({top:0,behavior:"smooth"});
+});
+$("logout").addEventListener("click",()=>{
+ $("dashboard").classList.remove("active");
+ $("login").classList.add("active");
+ $("formMessage").textContent="You exited the demo workspace.";
+ window.scrollTo({top:0,behavior:"smooth"});
+});
 $("search").addEventListener("input",()=>{
  const q=$("search").value.toLowerCase().trim();let n=0;
- document.querySelectorAll(".tool").forEach(card=>{const show=(card.dataset.name+" "+card.innerText).toLowerCase().includes(q);card.classList.toggle("hide",!show);if(show)n++});
- $("count").textContent=n+" tool"+(n===1?"":"s");$("empty").style.display=n?"none":"block";
+ document.querySelectorAll(".tool").forEach(c=>{
+ const yes=(c.dataset.name+" "+c.innerText).toLowerCase().includes(q);
+ c.classList.toggle("hide",!yes);if(yes)n++;
+ });
+ $("count").textContent=n+" tools";$("empty").classList.toggle("hide",n!==0);
 });
 function calc(){
  const s=$("expr").value.trim();
- if(!s){$("calcResult").textContent="Enter a calculation first.";return}
- if(!/^[\d\s()+\-*/%.]+$/.test(s)){$("calcResult").textContent="Use numbers and + − × ÷ ( ) only.";return}
- try{const r=Function('"use strict";return ('+s+')')();$("calcResult").textContent=Number.isFinite(r)?"Result: "+r:"Please check the expression."}
- catch(e){$("calcResult").textContent="Invalid expression. Please try again."}
+ if(!s){$("calcResult").textContent="Enter an expression.";return}
+ if(!/^[\d\s()+\-*/%.]+$/.test(s)){$("calcResult").textContent="Use numbers and basic operators only.";return}
+ try{const n=Function('"use strict";return ('+s+')')();$("calcResult").textContent=Number.isFinite(n)?"Result: "+n:"Check the expression."}
+ catch(e){$("calcResult").textContent="Invalid expression."}
 }
 function age(){
- const s=$("dob").value;if(!s){$("ageResult").textContent="Please choose your birth date.";return}
- const b=new Date(s+"T00:00:00"),now=new Date();if(b>now){$("ageResult").textContent="Birth date cannot be in the future.";return}
- let y=now.getFullYear()-b.getFullYear(),m=now.getMonth()-b.getMonth(),d=now.getDate()-b.getDate();
- if(d<0){m--;d+=new Date(now.getFullYear(),now.getMonth(),0).getDate()}
+ if(!$("dob").value){$("ageResult").textContent="Choose your birth date.";return}
+ const b=new Date($("dob").value+"T00:00:00"),n=new Date();
+ if(b>n){$("ageResult").textContent="Birth date cannot be in the future.";return}
+ let y=n.getFullYear()-b.getFullYear(),m=n.getMonth()-b.getMonth(),d=n.getDate()-b.getDate();
+ if(d<0){m--;d+=new Date(n.getFullYear(),n.getMonth(),0).getDate()}
  if(m<0){y--;m+=12}
- $("ageResult").textContent=`You are ${y} years, ${m} months and ${d} days old.`;
+ $("ageResult").textContent=`${y} years, ${m} months, ${d} days`;
 }
-function password(){
+function makePassword(){
  const len=Math.max(8,Math.min(32,parseInt($("plen").value)||16));
  const chars="ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz23456789!@#$%&*?";
- let out="";const bytes=new Uint32Array(len);crypto.getRandomValues(bytes);
- for(let i=0;i<len;i++)out+=chars[bytes[i]%chars.length];
- $("passResult").textContent=out;
+ const bytes=new Uint32Array(len);crypto.getRandomValues(bytes);
+ $("passResult").textContent=Array.from(bytes,b=>chars[b%chars.length]).join("");
 }
-async function copyPass(){
- const p=$("passResult").textContent;if(!p){$("passResult").textContent="Generate a password first.";return}
- try{await navigator.clipboard.writeText(p);$("passResult").textContent="Password copied! "+p}
- catch(e){$("passResult").textContent="Select the generated password and copy it manually: "+p}
+async function copyPassword(){
+ const p=$("passResult").textContent;
+ if(!p){$("passResult").textContent="Generate a password first.";return}
+ try{await navigator.clipboard.writeText(p);$("passResult").textContent="Copied: "+p}
+ catch(e){$("passResult").textContent="Select and copy manually: "+p}
 }
 function wordCount(){
- const s=$("words").value.trim(),w=s?s.split(/\s+/).length:0;
- $("wordResult").textContent=`Words: ${w} · Characters: ${$("words").value.length} · Characters (no spaces): ${$("words").value.replace(/\s/g,"").length}`;
+ const s=$("words").value.trim(),all=$("words").value;
+ $("wordResult").textContent=`Words: ${s?s.split(/\s+/).length:0} · Characters: ${all.length} · No spaces: ${all.replace(/\s/g,"").length}`;
 }
-function percent(){
- const a=Number($("part").value),b=Number($("whole").value);
- if($("part").value===""||$("whole").value===""||b===0){$("percentResult").textContent="Enter both values; total must not be zero.";return}
- $("percentResult").textContent=`${a} is ${(a/b*100).toFixed(2)}% of ${b}.`;
+function percentage(){
+ const a=$("part").value,b=$("whole").value;
+ if(a===""||b===""||Number(b)===0){$("percentResult").textContent="Enter values; total must not be zero.";return}
+ $("percentResult").textContent=`${a} is ${(Number(a)/Number(b)*100).toFixed(2)}% of ${b}.`;
 }
 function splitBill(){
  const b=Number($("bill").value),p=Number($("people").value);
@@ -149,4 +185,3 @@ function splitBill(){
 </script>
 </body>
 </html>
-
